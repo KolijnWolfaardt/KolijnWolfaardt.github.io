@@ -1,0 +1,242 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+/*
+  637eab  background-blue
+  0C2245  dark blue
+  B59F96  Weird brown
+  DE7A6A  Awkward Red
+*/
+
+$backgroundGrey:   #444;
+$lightBlue:        #637eab;
+$lightRed:         #DE7A6A;
+
+$PageWidth:        800px;
+
+// Using media queries with like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+/*********************************************
+      DEFAULT STUFF
+*********************************************/
+
+html
+{
+  min-height: 100%;
+}
+
+body
+{
+	background-image:url('../res/groovepaper_blue.png');
+	font-family:"Helvetica";
+  padding:0px;
+  margin:0px;
+  border:0;
+  min-height: 100%;
+}
+
+
+h1
+{
+	
+	/*text-shadow: 1px 1px 3px rgba(255,255,255,0.1);*/
+  font-size:40pt;
+  margin-top:80px;
+  margin-bottom:10px;
+  color: #4a6289;
+  text-shadow: 2px 1px 5px #ccc;
+}
+
+h2
+{
+	/*color: rgba(0,0,0,0.6);
+  text-shadow: 2px 2px 3px rgba(255,255,255,0.1);*/
+  font-size:26pt;
+  margin-bottom:0;
+  color: #111;
+  text-shadow: 2px 1px 5px #ccc;
+}
+
+img
+{
+    max-width: 600px; 
+    margin: 10px auto 10px auto;
+    min-width:100px;
+    display:block;
+}
+
+
+a 
+{
+  color: #111;
+}
+
+a:hover
+{
+  color: $lightRed;
+}
+
+table
+{
+  margin:10px auto;
+  background-color: #ddd;
+  text-align: left;
+  width:auto;
+}
+
+td
+{
+  vertical-align: top;
+}
+
+.td-name
+{
+  width:25%;
+}
+
+.td-size
+{
+  width:10%;
+}
+
+/*********************************************
+      LAYOUT
+*********************************************/
+
+#centreDiv
+{
+  width:1000px; 
+  margin:0 auto 0 auto;
+}
+
+#grayBackground
+{
+	width:800px;
+	padding:30px 20px 30px 80px;
+	background-color:rgb(236,236,236);
+	color:$backgroundGrey;
+	/*text-shadow: 1px 1px rgba(150,150,150,0.3);*/
+}
+
+/*********************************************
+      POSTS
+*********************************************/
+
+.post
+{
+  padding:20px 30px 20px 100px;
+}
+
+.textSpace
+{
+  width:600px;	
+  padding-left:20px;
+  line-height: 160%;
+}
+
+
+.post-meta
+{
+  color:#333;
+  font-size:8pt;
+  margin-bottom:40px;
+}
+
+/*********************************************
+      HEADER BAR
+*********************************************/
+
+#header
+{
+  height:180px;
+  margin:80px 0 30px 0;
+}
+
+#header-title
+{
+  font-size: 42pt;
+  margin-bottom: 30px
+}
+
+/*********************************************
+      NAV MENU
+*********************************************/
+
+.header-nav-menu
+{
+  height: auto;
+  width: 100%;
+  z-index: 35;
+  position: relative;
+
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+ul, li {
+    padding: 0;
+    margin: 0;
+}
+
+.header-nav-menu ul
+{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  height: auto;
+}
+
+ul li.menuitem
+{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  width: 260px;
+  height:auto;
+}
+
+ul li.menuitem a 
+{
+  height: 60px;
+  width: inherit;
+  display: inline-block;  
+  padding: 20px 0 0 0;
+
+  color: #569;
+  font-size:16pt;
+  font-weight: bold;
+  text-decoration: none;
+  vertical-align: middle;
+
+  text-align: center;
+  transition-property: background;
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
+  border-bottom: thick solid #637eab;
+}
+
+ul li.menuitem :hover
+{
+  background-color: $lightBlue;
+  border-bottom: thick solid $lightRed;
+  color: #eee;
+  text-shadow: 1px 1px #222;
+}
+

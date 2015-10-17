@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+    <body>
+        <div id="centreDiv">
+            <div id="grayBackground">
+                {% include header.html %}
+
+                <div class="page-content">
+                    {{ content }}
+                </div>
+
+            {% include footer.html %}
+            </div>
+        </div>
+    </body>
+
+</html>
