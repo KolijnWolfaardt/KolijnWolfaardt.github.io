@@ -70,6 +70,12 @@ h2
   text-shadow: 2px 1px 5px #ccc;
 }
 
+h3
+{
+  margin-top:70px;
+  font-size:20pt;
+}
+
 img
 {
     max-width: 600px; 
@@ -153,6 +159,7 @@ td
   color:#333;
   font-size:8pt;
   margin-bottom:40px;
+  margin-top:10px;
 }
 
 /*********************************************
@@ -169,6 +176,11 @@ td
 {
   font-size: 42pt;
   margin-bottom: 30px
+  
+}
+#header-title a
+{
+  text-decoration:none;
 }
 
 /*********************************************
