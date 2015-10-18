@@ -51,7 +51,7 @@ After the offset positions the scan elements are stored. Each element begins wit
 #### Palettes ####
 The file contains various palettes. The length of the palette is calculated by <i>Sprite Width</i> x 3. The palettes are stored as Blue, Green and Red values (BRG). 
 
-![Palette]({{ site.url }}/images/rct_palette.png)
+![Palette]({{ site.baseurl }}/images/rct_palette.png)
 
 This is one of the palettes in the file, which is also used for decoding the sprites. The other palettes are smaller, often only containing one colour. I have no idea what they are for.
 
@@ -61,7 +61,7 @@ This is one of the palettes in the file, which is also used for decoding the spr
 
 I wrote a script to extract any subset of the sprites to a png image. The script also writes the sprite metadata to a file, and writes the sprite number next to the sprite. It is available at [https://github.com/KolijnWolfaardt/RCT_tools/blob/master/exportSprites.py](https://github.com/KolijnWolfaardt/RCT_tools/blob/master/exportSprites.py).
 
-![Example Sprite Sheet]({{ site.url }}/images/rct_example_sprites.png)
+![Example Sprite Sheet]({{ site.baseurl }}/images/rct_example_sprites.png)
 
 
 The script requires [numpy](http://www.numpy.org/) and [PIL](http://www.pythonware.com/products/pil/) to run.
